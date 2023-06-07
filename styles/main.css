@@ -1,0 +1,176 @@
+/* Переменные */
+:root{
+/* Цвета */
+--Font-color:black;
+--bg-color:white;
+--special-color:rgb(195, 196, 196);
+
+}
+/* Глобальные настройки сайта */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--Font-color);
+    font-family: Arial, Helvetica, sans-serif;
+    /* межстрочный интервал */
+    line-height: 1.5;
+}
+
+
+/* ====HEADER==== */
+header{
+    padding:  0 4px;
+    height: 60px;
+    border-bottom: 3px solid var(--Font-color);
+    box-shadow:0 5px 5px var(--special-color);
+    display: flex;
+    justify-content: space-between; 
+     
+}
+/* Левая колонка с логотипом и названием */
+.head-col-left, .head-col-right{
+    display: flex;
+    align-items: center;
+}
+.head-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.head-image{
+    height: 90px;
+}
+.site-name{
+    margin-left: 6px;
+    font-weight: normal;
+    font-size: 2em;
+    /* отступ между буквами letter-spacing: */
+    letter-spacing: 4px;
+}
+/* Правая сторона меню */
+.base-nav{
+    display: flex;
+    align-items: center;
+   
+}
+.bn-item{
+    margin-left: 6px;
+    padding: 6px 8px;
+    border: 2px solid var(--special-color);
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all .1s;
+    box-shadow: 8px 5px 5px var(--special-color) ;
+}
+.burger-nav:hover .dropdown-menu{display: flex;}   
+
+/*  Выпадающее меню на телефонах */
+.burger-nav{
+display: flex;
+display: none;
+}
+.burger-img-container{
+    display: flex;
+    align-items: center; 
+}
+.burher-img{
+    height: 40px;
+}
+
+.dropdown-menu{
+    
+    height: 100vh;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--Font-color);
+    position:fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+.dm-item{
+    padding: 6px 8px 5px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+
+/* =====MAIN===== */
+main{
+    padding: 30px 4px;
+}
+.bn-item:hover{
+    background-color: var(--special-color);
+    color: var(--bg-color);
+}
+.container
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card
+{
+    margin: 0 6px;
+    max-width: 300px;
+    padding: 20px 26px;
+    border: 3px solid var(--Font-color);
+    box-shadow: 8px 5px 5px var(--special-color) ;
+   
+}
+.card h3{font-size: 1.2em;} /*размер шрифта в 1.2 раза больше размера по умолчанию (16px)*/
+.card hr{
+    height: 2px;
+    margin: 9px 0;   
+    background-color: var(--special-color );   
+}
+
+
+
+
+
+
+
+
+
+/* =====Адаптивный дезайн===== */
+/* медиазапросы аналог if else*/
+/* если смотри с экрана и  */
+@media screen and (max-width:750px){
+    /* body{ background-color: red; }*/
+       /*пример изменение сайта при изменении размера страницы*/
+    
+    
+
+    /* ====HEADER==== */
+    .base-nav{display: none;}
+    .burger-nav{display:block;}
+    
+
+
+
+
+
+    /* =====MAIN===== */
+
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin: 9px;
+        max-width: 500px;
+    }
+    .card h3{text-align: center;}
+
+
+
+
+}
